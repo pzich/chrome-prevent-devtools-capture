@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Prevent Devtools Capture",
+  "description": "Prevents the devtools shortcuts from being captured.",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["prevent-capture.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
